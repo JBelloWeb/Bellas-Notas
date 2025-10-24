@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {  /*Los pseudoelementos no se cuentan dentro del selector universal '*' */
+    margin: 0;
+    box-sizing: inherit; /*Lo hereda del html, es agresivo aplicar constantemente a todo una misma propiedad*/
+}
+
+img, picture, video, svg, canvas {
+    max-width: 100%;
+    display: block; 
+}
+
+input, button, textarea, select { /*Son elementos que no heredan automáticamente las tipografías*/
+    font: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}

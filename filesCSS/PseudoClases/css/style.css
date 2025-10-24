@@ -1,0 +1,148 @@
+/*Los pseudoelementos no existen hasta que no los creemos*/
+
+/*La propiedad CONTENT es obligatoria, ahí le diremos qué va a mostrar y es lo que vamos a afectar*/
+
+/*Heredan las propiedades del elemento padre*/
+
+/*Son elementos INLINE por default*/
+
+/*Si el contenido es una imágen, no podremos modificar su tamaño de ninguna manera*/
+/*La solución es agregar esa imagen como BACKGROUND*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(43, 142, 195);
+}
+
+main {
+    max-width: 960px;
+    min-height: 200px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(38, 111, 151);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+
+h2 {
+    text-align: center;
+    background-color: rgb(50, 143, 194);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+
+img {
+    max-width: 300px;
+    display: block;
+}
+
+
+.pseudoelementos {
+    outline: 1px solid red;
+    width: fit-content;
+}
+
+.pseudoelementos::before {
+    content: '❤️ ';
+}
+
+.pseudoelementos::after {
+    content: '❤️';
+}
+
+.cardBloque,
+.cardImagen,
+.cardBackground {
+
+    outline: 0.25rem solid rgba(12, 4, 133);
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin: 2rem auto;
+
+
+    position: relative;
+}
+
+.cardBloque::after {
+    content: '💀';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.7rem;
+
+
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: lightpink;
+    outline: 0.25rem solid rgba(12, 4, 133);
+
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+.cardImagen::after {
+    content: url('../img/x-logo-mini.png');
+    background-color: rgb(243, 243, 243);
+    outline: 0.25rem solid rgba(12, 4, 133);
+    border-radius: 50%;
+
+    bottom: -10px;
+    right: -10px;
+    position: absolute;
+
+    text-align: center;
+    padding: 0.30rem 0.20rem 0rem;
+}
+
+.cardBackground::after {
+    content: '';
+
+    display: block;
+    height: 50px;
+    aspect-ratio: 1/1; 
+    background-color: rgb(255, 255, 255);
+
+    outline: 0.25rem solid rgba(12, 4, 133);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+
+    
+    background-image: url('../img/x-logo.png');
+
+        background-size: contain;
+    background-repeat: no-repeat; 
+    background-size: 30px;
+    background-position: center;
+}

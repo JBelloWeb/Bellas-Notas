@@ -1,0 +1,87 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    background-color: brown;
+    position: sticky;
+}
+
+#examples-1{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    .figure-1, .figure-2, .figure-3{
+            width: 25vw;
+            margin: 1rem;
+            height: fit-content;
+            position: relative;
+                &::after{
+                    content: 'Aspect Ratio: 1/1';
+                    text-align: center;
+                    display: block;
+                    position: absolute;
+                    bottom: 20px;
+                    color: aliceblue;
+                    padding: 3px 0;
+                    width: 100%;
+                    background-color: brown;
+                }
+        }
+        .figure-2::after{
+            content: 'Aspect Ratio 2/1';
+        }
+        .figure-3::after{
+            content: 'Aspect Ratio 2/2.5';
+        }
+}
+
+#examples-2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 40vw;
+    margin: auto;
+}
+
+.as-1-1{
+    aspect-ratio: 1 / 1;
+    
+}
+
+.as-2-1{
+
+    aspect-ratio: 2 / 1;
+}
+
+.as-2-3{
+    aspect-ratio: 2 / 2.5;
+}
+
+.as-16-9{
+
+    aspect-ratio: 16 / 9;
+}
+
+.as-21-9{
+    aspect-ratio: 21 / 9;
+}
+
+footer{
+height: 10vw;
+}

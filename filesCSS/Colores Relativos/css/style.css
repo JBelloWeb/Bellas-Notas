@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+h1, h2{
+    margin: 50px auto;
+    text-align: center  ;
+}
+
+.muestras-rgb {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px 100px;
+    width: 90%;
+    margin: auto;
+
+    :nth-child(1) {
+        background-color: rgb(from blue r g b);
+
+        &::before {content: 'Color Base';}
+    }
+
+    :nth-child(2) {
+        background-color: rgb(from blue r g 0);
+
+        &::before {content: 'Blue valor 0';}
+    }
+
+    :nth-child(3) {
+        background-color: rgb(from blue r 60 10);
+
+        &::before {content: 'Green Valor 60 - Blue valor 0';}
+    }
+
+    :nth-child(4) {
+        background-color: rgb(from blue 80 60 50);
+
+        &::before {content: 'Red 80 - Green 60 - Blue 50';}
+    }
+
+        :nth-child(5) {
+        background-color: rgb(from blue 100 100 100);
+
+        &::before {content: 'Red 100 - Green 100 - Blue 100';}
+    }
+}
+
+.muestras-hsl {
+    --rojo: #f02626;
+
+    display: flex;
+    gap: 5px 100px;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+
+    :nth-child(1) {
+        background-color: hsl(from var(--rojo) h s l);
+
+        &::before {content: 'Color Base';}
+    }
+
+    :nth-child(2) {
+        background-color: hsl(from var(--rojo) h 50 l);
+
+        &::before {content: 'Saturación al 50%';}
+    }
+
+    :nth-child(3) {
+        background-color: hsl(from var(--rojo) h s 90);
+
+        &::before {content: 'Luminocidad al 90%';}
+    }
+
+    :nth-child(4) {
+        background-color: hsl(from var(--rojo) 90 s l);
+
+        &::before {content: 'Hue rotado 90deg';}
+    }
+
+    :nth-child(5) {
+        background-color: hsl(from var(--rojo) 10 80 60);
+
+        &::before {content: 'Todo Combinado';}
+    }
+}
+
+.muestras-calc-hsl {
+
+    --base-color: rgb(69, 29, 227);
+    
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 5px 100px;
+        width: 90%;
+        margin: auto;
+        
+    :nth-child(1){
+        background-color: var(--base-color);
+
+        &::before{content: 'Color Base';}
+    }
+
+    :nth-child(2){
+        background-color: hsl(from var(--base-color) calc(h - 20) s l);
+
+        &::before{content: 'Hue - 20';}
+    }
+
+    :nth-child(3){
+        background-color: hsl(from var(--base-color) calc(h - 40) s l);
+
+        &::before{content: 'Hue - 40';}
+    }
+
+    :nth-child(4){
+        background-color: hsl(from var(--base-color) calc(h + 20) s l);
+
+        &::before{content: 'Hue + 20';}
+    }
+
+    
+    :nth-child(5){
+        background-color: hsl(from var(--base-color) calc(h + 40) s l);
+
+        &::before{content: 'Hue + 40';}
+    }
+
+    :nth-child(6){
+        background-color: var(--base-color);
+
+        &::before{content: 'Color Base';}
+    }
+
+    :nth-child(7){
+        background-color: hsl(from var(--base-color) h calc(s + 20) l);
+
+        &::before{content: 'Saturation + 20';}
+    }
+
+    :nth-child(8){
+        background-color: hsl(from var(--base-color) h calc(s + 40) l);
+
+        &::before{content: 'Saturation + 40';}
+    }
+
+    :nth-child(9){
+        background-color: hsl(from var(--base-color) h calc(s - 20) l);
+
+        &::before{content: 'Saturation - 20';}
+    }
+
+    :nth-child(10){
+        background-color: hsl(from var(--base-color) h calc(s - 40) l);
+
+        &::before{content: 'Saturation - 40';}
+    }
+
+    :nth-child(11){
+        background-color: var(--base-color);
+
+        &::before{content: 'Color Base';}
+    }
+
+    :nth-child(12){
+        background-color: hsl(from var(--base-color) h s calc(l + 20));
+
+        &::before{content: 'Hue + 20';}
+    }
+
+    :nth-child(13){
+        background-color: hsl(from var(--base-color) h s calc(l + 40));
+
+        &::before{content: 'Hue + 40';}
+    }
+
+    :nth-child(14){
+        background-color: hsl(from var(--base-color) h s calc(l - 20));
+
+        &::before{content: 'Hue - 20';}
+    }
+
+    :nth-child(15){
+        background-color: hsl(from var(--base-color) h s calc(l - 40));
+
+        &::before{content: 'Hue - 40';}
+    }
+}
+
+.muestras-alpha {
+
+    height: 255px;
+    background-image: url(../media/Fondo\ diris.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    --base-color: rgb(108, 227, 29);
+
+    display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 5px 100px;
+        width: 90%;
+        margin: auto;
+
+    :nth-child(1) {
+        background-color: var(--base-color);
+
+        &::before{content: 'Color Base';}
+    }
+
+    :nth-child(2) {
+        background-color: hsla(from var(--base-color) h s l / 80%);
+
+        &::before{content: 'Alpha 80%';}
+    }
+
+    :nth-child(3) {
+        background-color: hsla(from var(--base-color) h s l / 60%);
+
+        &::before{content: 'Alpha 60%';}
+    }
+
+    :nth-child(4) {
+        background-color: hsla(from var(--base-color) h s l / 40%);
+
+        &::before{content: 'Alpha 40%';}
+    }
+
+    :nth-child(5) {
+        background-color: hsla(from var(--base-color) h s l / 20%);
+
+        &::before{content: 'Alpha 20%';}
+    }
+}
+
+#card {
+    --base-color: rgb(209, 113, 23);
+    --darker-color: hsla(from var(--base-color) h 80 20);
+    --title-color: hsla(from var(--base-color) h 80 95);
+    --data-color: hsla(from var(--base-color) h 50 30 / 80%);
+    --text-color: hsla(from var(--base-color) h s 30);
+    --text-color-alt: hsla(from var(--base-color) calc(h + 90) s 40);
+    --text-color-light: hsla(from var(var(--base-color)) h s 95);
+
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    border-radius: 25px;
+    border: 5px var(--darker-color) solid;
+    overflow: hidden;
+
+    &::before {
+        content: 'Caballo';
+        text-align: center;
+        font-weight: bolder;
+        color: var(--text-color-alt);
+        align-items: center;
+        display: block;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        background-color: var(--base-color);
+    }
+
+    &::after {
+        content: 'La compañía sana del caballo';
+        display: block;
+        position: relative;
+        z-index: 2;
+        width: 100px;
+        height: 20px;
+        bottom: 0%;
+        right: 0%;
+    }
+
+    &:hover {
+        --base-color: rgb(0, 47, 255);
+    }
+
+ img {
+        
+        object-fit: cover;
+        width: 500px;
+        height: 700px;
+        object-position: center right;
+    }
+
+}
+
+.box {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    outline: 3px solid black;
+}
+
+.box::before {
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: beige;
+}

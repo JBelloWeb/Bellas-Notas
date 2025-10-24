@@ -92,6 +92,7 @@ h1 {
         background-color: var(--belloRed);
         width: 10%;
         text-align: center;
+        transition: background-color 0.3s;
 
         &:hover {
             background-color: hsla(from var(--belloRed) h 120 calc(l + 20));
@@ -113,7 +114,7 @@ h1 {
     --headerColor: hsla(from var(--mainColor) h 80 90);
     --textShadow: hsla(from var(--mainColor) calc(h + 45) s 10);
     --backgroundColor: hsla(from var(--mainColor) h 60 90 / 90%);
-    --textColor: hsla(from var(--mainColor) h s calc(l + 50));
+    --textColor: hsla(from var(--mainColor) h s calc(l + 80));
     --secondaryColor: hsla(from var(--mainColor) h 60 calc(l - 10));
 
     border: 4px solid var(--mainColor);
@@ -122,9 +123,8 @@ h1 {
     min-width: 400px;
     max-width: 500px;
     width: 100%;
-    min-height: 200px;
-    overflow: hidden;    
-
+    height: fit-content;
+    
     h2 {
         color: var(--headerColor);
         text-shadow: var(--textShadow) 1px 2px 2px ;
@@ -136,14 +136,16 @@ h1 {
     }
     
     div {
+        border-radius: 15px;
         font-family: 'Type Machine';
         color: var(--textColor);
         background-color: var(--backgroundColor);
-        height: 100%;
+        min-height: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: start;
-        gap: 1rem;        
+        gap: 0.1rem;        
     }
 }
 
@@ -160,14 +162,60 @@ h1 {
 .link {
     --hoverColor: hsla(from var(--secondaryColor) h calc(s + 20) calc(l + 10) / 90%);
 
-    font-weight: 900;
     border-radius: 20px;
     background-color: var(--secondaryColor);
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
+    letter-spacing: 1px;
+
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+
+    position: relative;
+    overflow: hidden;
 
     &:hover{
         background-color: var(--hoverColor);
+        transform: scale(1.05);
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px;
+        transform: rotate(25deg) scaleY(200%);
+        filter: opacity(0);
+        display: block;
+        height: 100%;
+        width: 20px;
+        background-color: var(--backgroundColor);
+        mix-blend-mode: luminosity;
+        animation: shine 5s ease infinite;
+    }
+}
+
+@keyframes shine{
+    0%, 100% {
+        filter: opacity(0);
+    }
+
+    20% {
+        filter: opacity(.5) blur(10px);
+    }
+
+    40% {
+        left: 150%;
+        filter: opacity(.5);
+    }
+
+    41%{
+        filter: opacity(0);
+    }
+
+    100%{
+        left: -50px;
     }
 }
 

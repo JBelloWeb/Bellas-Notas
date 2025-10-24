@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(43, 142, 195);
+}
+
+main {
+    max-width: 960px;
+    min-height: 200px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(38, 111, 151);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+
+h2 {
+    text-align: center;
+    background-color: rgb(50, 143, 194);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+
+img {
+    max-width: 300px;
+}
+
+
+
+.card {
+    --grad-start: whitesmoke;
+    --grad-end: rgb(197, 197, 197);
+    --main-color: hsl(120, 85%, 42%);
+    --dark-color: hsl(120, 95%, 23%);
+    background: linear-gradient(var(--grad-start), var(--grad-end));
+    aspect-ratio: 1 / 1.2;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid var(--dark-color);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    display: block;
+    width: calc(100% - 0.5rem);
+    background-color: var(--main-color);
+    position: absolute;
+}
+
+.card::after {
+    height: 1.5rem;
+    top: 0.25rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card::before {
+    height: 1rem;
+    bottom: 0.25rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-lapis {
+    --grad-start: whitesmoke;
+    --grad-end: rgb(255, 203, 203);
+    --main-color: hsl(0, 80%, 41%);
+    --dark-color: rgb(118, 5, 5);
+}
+
+.card-leon {
+    --grad-start: whitesmoke;
+    --grad-end: rgb(226, 190, 255);
+    --main-color: hsl(262, 81%, 35%);
+    --dark-color: rgb(55, 9, 79);
+}
+
+.card-nephenee {
+    --grad-start: whitesmoke;
+    --grad-end: rgb(92, 200, 148);
+    --main-color: hsl(154, 96%, 36%);
+    --dark-color: rgb(6, 87, 55);
+}
+
+
+
+
+.stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    aspect-ratio: 3/1;
+    background: rgb(239, 221, 173);
+
+    /**/perspective: 1000px;
+
+
+}
+
+.pers {
+    perspective: 1000px;  /* Al contenedor que engloba todos los elementos se le establece una perspectiva para hacer las animaciones más realistas */
+}
+
+
+.rotate3d {
+
+
+    transform: rotateY(10deg);
+
+    box-shadow: 1px 1px 2px black;
+
+
+
+}
+
+
+
+.translate3d {
+    transform: translateX(0px) translateZ(55px);
+}
+
+/**/
+.card-3d {
+    transform: rotateX(10deg) rotateY(-40deg) rotateZ(10deg) translateZ(20px);
+}

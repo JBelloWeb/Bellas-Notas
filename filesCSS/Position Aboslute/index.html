@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial sobre posicionamiento relativo y absoluto en CSS">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Posición Absoluta y Relativa</title>
+</head>
+<body>
+    <main>
+        <h1>Positon Relative & Position Absolute</h1>
+        <section>
+            <h2>Relative</h2>
+            <p>La Posición Relativa nos permite utilizar los valores de CSS que afectan <em>"TOP - BOTTOM - LEFT - RIGHT"</em> los cuales modifican la posición del obejeto en la pantalla</p>
+            <div class="p-relative"></div>
+        </section>
+        <section>
+            <h2>Absolute</h2>
+            <p>La Posición Absoluta nos permite utilizar los valores de CSS que afectan <em>"TOP - BOTTOM - LEFT - RIGHT"</em> los cuales modifican la posición del obejeto en la pantalla, pero a diferencia de la posición relativa, la posición absoluta se basa en el contenedor padre más cercano que tenga una posición distinta a "static"</p>
+            <div class="relative-father">
+                <div class="p-absolute"></div>
+            </div>
+            <p>El ejemplo de debajo tiene un div con posición realtiva, cuyo hijo tiene posición absoluta y se le modifican todos los valores (top, bottom, right, left) a través de la propiedad de CSS "Inset". Al asignar el mismo valor a todos los puntos cardinales (y sin asignarles valores de alto y ancho) genera que el elemento se estire y ocupe todo su contenedor</p>
+            <div class="relative-father">
+                <div class="inset-value">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
