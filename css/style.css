@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Dignitary';
+    src: url(../assets/DignitaryGrandeur.ttf);
+}
+
+:root{
+    --belloRed: #d72638c7;
+    --belloCream: #fff2c7;
+    --belloBlack: #1f2428; 
+    --belloPurple: #7a5ddd;
+
+    --defaultShadow: 0px 2px 4px 0px var(--belloBlack);
+}
+
 html {
 box-sizing: border-box;
 scroll-behavior: smooth;
@@ -19,9 +33,93 @@ font: inherit;
 
 body {
 line-height: 1.5;
+background: url(../img/TramaBackgorund.jpg) center repeat;
+background-size: 50%;
 }
 
 h1, h2, h3, h4, h5, h6 {
 line-height: 1.2;
 overflow-wrap: break-word;
+font-family: 'Dignitary';
+text-align: center;
+color: var(--belloCream);
 }
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+h1 {
+    font-size: 4em;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+#search {
+    display: block;
+    width: 60vw;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+    input {
+        border: 3px solid var(--belloRed);
+        background-color: var(--belloCream);
+        border-radius: 30px;
+        padding: 5px;
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+
+    a {
+        font-size: 1.5rem;
+        height: 100%;
+        display: block;
+        background-color: var(--belloRed);
+        width: 10%;
+        text-align: center;
+    }
+
+}
+
+#temas {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: auto;
+    width: 90vw;
+}
+
+.cont-tema {
+    --mainColor: var(--belloPurple);
+
+    border: 4px solid var(--mainColor);
+    border-radius: 20px;
+    width: 100%;
+    background-color: var(--mainColor);
+    min-height: 200px;
+    overflow: hidden;
+
+    h2 {
+       border-radius: 15px 15px 0px 0px;
+        background-color: var(--mainColor);
+        min-height: 50px;
+        align-self: center;
+    }
+    
+    div {
+        background-color: var(--belloCream);
+        height: 100%;
+    }
+    
+}
+
+#html {--mainColor: #E34F26;}
+#css {--mainColor: #1572B6;}
+#js {--mainColor: #F0DB4F;}
