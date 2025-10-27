@@ -7,31 +7,72 @@
     <title>Relación de Aspecto</title>
 </head>
 <body>
+
+    <a href="../../index.html">
+        <div id="back-button">
+            <img src="../../img/Back.png" alt="Back button">
+        </div>
+    </a>
+
     <main>
         <h2 class="page-header">Aspect Ratio</h2>
 
-        <article class="card">
-            <h4>1</h4>
-            <p></p>
-        </article>
+        <section class="samples">
+            <article class="card-s fd-column">
+                <h4>1</h4>
+                <div class="card-content fd-column">
+                    <p>La imagen tiene una relación de aspecto 1/1. Esto establece un ancho igual al alto, generando un cuadrado perfecto.</p>
+                    <div class="portrait">
+                        <figure class="figure-1">
+                            <img class="as-1-1" src="img/Landscape.jpeg" alt="Hyrule">
+                        </figure>
+                    </div>
+                </div>
+            </article>
 
-        <section id="examples-1">
-            <figure class="figure-1">
-                <img class="as-1-1" src="img/Landscape.jpeg" alt="Hyrule">
-            </figure>
-            <figure class="figure-2">
-                <img class="as-2-1" src="img/Landscape.jpeg" alt="Hyrule">
-            </figure>
-            <figure class="figure-3">
-                <img class="as-2-3" src="img/Landscape.jpeg" alt="Hyrule">
-            </figure>
+            <article class="card-s fd-column">
+                <h4>2</h4>
+                <div class="card-content fd-column">
+                    <p>La imagen tiene una relación de aspecto de 2/1, el ancho será el doble del alto. Genera un rectángulo más ancho que alto.</p>
+                    <div class="portrait">
+                        <figure class="figure-1">
+                            <img class="as-2-1" src="img/Landscape.jpeg" alt="Hyrule">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card-s fd-column">
+                <h4>3</h4>
+                <div class="card-content fd-column">
+                    <p>La imagen tiene una relación de aspecto de 2/3, será un tercio más alto que ancho. Generá un rectangulo un poco más alto que ancho.</p>
+                    <div class="portrait">
+                        <figure class="figure-1">
+                            <img class="as-2-3" src="img/Landscape.jpeg" alt="Hyrule">
+                        </figure>
+                    </div>
+                </div>
+            </article>
         </section>
 
-        <section id="examples-2">
-            <iframe class="as-16-9 ifrm" src="https://www.youtube.com/embed/fgGVUrWKDL0?si=ThVijoaZCNyvVjyu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe class="as-21-9 ifrm" src="https://www.youtube.com/embed/jan5CFWs9ic?si=uD62LEEhnTjjd6o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
+        <section>
+            <article class="card-l fd-column">
+                <h4>4</h4>
+                <p>El video tiene una relación de aspecto de 16/9 que es la definición estándar para videos hoy en día. Con esta configuración jamás se generarán márgenes negros en el reproductor.</p>
+                    <figure>
+                        <iframe class="as-16-9" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=RVsv3t1Sjgtw8W5S" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </figure>
+            </article>
 
+
+            <article class="card-l fd-column">
+                <h4>5</h4>
+                <p>El video tiene una realción de aspecto de 21/9, una definición propia de pantallas súper anchas. Se suele utilizar para videos de alta definición como pueden ser los trailers.</p>
+                    <figure>
+                        <iframe class="as-21-9" src="https://www.youtube.com/embed/bADR5QowGXc?si=iDo3r1_GaQK96CQY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </figure>
+            </article>
+        </section>
     </main>
     <footer></footer>
 </body>
