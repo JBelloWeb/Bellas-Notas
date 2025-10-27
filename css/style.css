@@ -27,7 +27,7 @@ padding: 0;
 box-sizing: inherit;
 }
 
-img, picture, video, svg, canvas, iframe {
+img, picture, video, svg, canvas {
 max-width: 100%;
 display: block;
 }
@@ -39,7 +39,7 @@ font: inherit;
 body {
 line-height: 1.5;
 background: url(../img/TramaBackgorund.jpg) center repeat;
-background-size: 50%;
+background-size: 40%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,8 +87,8 @@ text-decoration: none;
 
 .page-header {
     font-size: 4em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
 }
 
 #search {
@@ -344,9 +344,11 @@ text-decoration: none;
 
 .as-1-1{
     aspect-ratio: 1 / 1;
+    
 }
 
 .as-2-1{
+
     aspect-ratio: 2 / 1;
 }
 
@@ -355,9 +357,15 @@ text-decoration: none;
 }
 
 .as-16-9{
+
     aspect-ratio: 16 / 9;
 }
 
 .as-21-9{
     aspect-ratio: 21 / 9;
+}
+
+.ifrm {
+    max-width: 40vw;
+    margin: auto;
 }
