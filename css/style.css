@@ -38,8 +38,8 @@ font: inherit;
 
 body {
 line-height: 1.5;
-background: url(../img/TramaBackgorund.jpg) center repeat;
-background-size: 40%;
+position: relative;
+background: url(../img/TramaBackgorund.jpg) center/40% repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,6 +83,18 @@ text-decoration: none;
     img{
         mix-blend-mode: color-dodge;
     }
+}
+
+.button{
+    width: fit-content;
+
+    font-family: 'Type Machine';
+    color: var(--belloCream);
+
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+
+    background-color: var(--belloBlack);
 }
 
 .page-header {
