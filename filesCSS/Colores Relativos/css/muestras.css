@@ -1,14 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-h1, h2{
-    margin: 50px auto;
-    text-align: center  ;
-}
-
 .muestras-rgb {
     display: flex;
     justify-content: space-evenly;
@@ -16,45 +5,54 @@ h1, h2{
     width: 90%;
     margin: auto;
 
+    div::before{
+        width: 100%;
+    }
+
     :nth-child(1) {
-        background-color: rgb(from blue r g b);
+        background-color: rgb(from var(--belloRed) r g b);
 
         &::before {content: 'Color Base';}
     }
 
     :nth-child(2) {
-        background-color: rgb(from blue r g 0);
+        background-color: rgb(from var(--belloRed) r g 0);
 
         &::before {content: 'Blue valor 0';}
     }
 
     :nth-child(3) {
-        background-color: rgb(from blue r 60 10);
+        background-color: rgb(from var(--belloRed) r 60 10);
 
         &::before {content: 'Green Valor 60 - Blue valor 0';}
     }
 
     :nth-child(4) {
-        background-color: rgb(from blue 80 60 50);
+        background-color: rgb(from var(--belloRed) 80 60 50);
 
         &::before {content: 'Red 80 - Green 60 - Blue 50';}
     }
 
         :nth-child(5) {
-        background-color: rgb(from blue 100 100 100);
+        background-color: rgb(from var(--belloRed) 100 100 100);
 
         &::before {content: 'Red 100 - Green 100 - Blue 100';}
     }
 }
 
 .muestras-hsl {
-    --rojo: #f02626;
+    --rojo: var(--belloRed);
 
     display: flex;
     gap: 5px 100px;
     justify-content: space-evenly;
     width: 90%;
     margin: auto;
+
+    div::before{
+        width: 100%;
+    }
+
 
     :nth-child(1) {
         background-color: hsl(from var(--rojo) h s l);
@@ -89,7 +87,7 @@ h1, h2{
 
 .muestras-calc-hsl {
 
-    --base-color: rgb(69, 29, 227);
+    --base-color: var(--belloRed);
     
         display: flex;
         justify-content: space-evenly;
@@ -97,6 +95,10 @@ h1, h2{
         gap: 5px 100px;
         width: 90%;
         margin: auto;
+
+        div::before{
+            width: 100%;
+        }
         
     :nth-child(1){
         background-color: var(--base-color);
@@ -191,13 +193,7 @@ h1, h2{
 }
 
 .muestras-alpha {
-
-    height: 255px;
-    background-image: url(../media/Fondo\ diris.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    --base-color: rgb(108, 227, 29);
+    --base-color: var(--belloCream  );
 
     display: flex;
         justify-content: space-evenly;
@@ -238,7 +234,7 @@ h1, h2{
 }
 
 #card {
-    --base-color: rgb(209, 113, 23);
+    --base-color: var(--belloRed);
     --darker-color: hsla(from var(--base-color) h 80 20);
     --title-color: hsla(from var(--base-color) h 80 95);
     --data-color: hsla(from var(--base-color) h 50 30 / 80%);
@@ -251,7 +247,15 @@ h1, h2{
     margin: auto;
     border-radius: 25px;
     border: 5px var(--darker-color) solid;
-    overflow: hidden;
+    position: relative;
+
+    figure{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    
 
     &::before {
         content: 'Caballo';
@@ -263,25 +267,27 @@ h1, h2{
         width: 75px;
         height: 75px;
         border-radius: 50%;
-        position: relative;
-        top: 0%;
-        left: 0%;
+        position: absolute;
+        top: -10px;
+        left:-10px;
         background-color: var(--base-color);
     }
 
     &::after {
         content: 'La compañía sana del caballo';
         display: block;
-        position: relative;
+        position: absolute;
+        text-align: center;
         z-index: 2;
-        width: 100px;
+        width: 100%;
+        margin: auto;
         height: 20px;
-        bottom: 0%;
-        right: 0%;
+        bottom: 0;
+
     }
 
     &:hover {
-        --base-color: rgb(0, 47, 255);
+        --base-color: var(--belloCream);
     }
 
  img {
@@ -298,7 +304,6 @@ h1, h2{
     margin: 30px auto;
     width: 200px;
     height: 200px;
-    outline: 3px solid black;
 }
 
 .box::before {
