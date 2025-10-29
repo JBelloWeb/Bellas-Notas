@@ -127,7 +127,7 @@ text-decoration: none;
 .button::before{
     content: '';
     position: absolute;
-    height: 100%;
+    height: 110%;
     width: 0%;
     right: 0;
     z-index: 1;
@@ -137,15 +137,18 @@ text-decoration: none;
     border-radius: 10px;
 
     box-shadow:
-    inset 0px 0px 20px 2px hsla(from var(--main-backColor) h s calc(l - 5) / 55%),
+    /* inset 0px 0px 20px 2px hsla(from var(--main-backColor) h s calc(l - 5) / 55%), */
     inset 0px 0px 20px 8px var(--main-changeColor); 
 
     transition: all 0.5s;
 }
-.button:hover::before{
-    right: auto;
-    left: 0;
-    width: 100%;
+.button:hover{
+
+    &::before{
+        right: auto;
+        left: 0;
+        width: 110%;
+    }
 }
 .button:active{
     transform: scale(0.95);
@@ -181,24 +184,6 @@ text-decoration: none;
         height: 50px;
         width: 60%;
     }
-
-    a {
-        color: inherit;
-        font-family: inherit;
-        border: 3px solid var(--belloCream);
-        border-radius: 30px;
-        font-size: 1.5rem;
-        line-height: 45px;
-        background-color: var(--belloRed);
-        width: 10%;
-        text-align: center;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: hsla(from var(--belloRed) h 120 calc(l + 20));
-        }
-    }
-
 }
 
 #temas {
