@@ -258,6 +258,14 @@ text-decoration: none;
 
 }
 
+.paragraph{
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+    color: var(--belloCream);
+    background-color: hsla(from var(--belloRed) h s l / 30%);
+}
+
 .link {
 
     transition: background-color 0.3s;
