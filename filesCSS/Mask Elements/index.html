@@ -4,57 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" type="image/x-icon">
     <title>Mask Elements</title>
 </head>
 <body>
-    <main>
-        <h1>Colocar máscaras a elementos</h1>
 
-        <p>Hay 2 propiedades que nos permiten enmascarar elementos en CSS</p>
+    <a href="../../index.html">
+        <div id="back-button">
+            <img src="../../img/Back.png" alt="Back button">
+        </div>
+    </a>
+
+    <main>
+        <h2 class="page -header">Colocar máscaras a elementos</h2>
+
+        <p class="paragraph">Hay 2 propiedades que nos permiten enmascarar elementos en CSS</p>
 
         <section>
-            <h2>Clip Path</h2>
+            <h3>Clip Path</h3>
 
-            <p>Clip Path traza un vector con la figura y forma que le indiquemos. Es más sencillo, menos pesado pero más limitado a la hora de ser creativos</p>
+            <p class="paragraph">Clip Path traza un vector con la figura y forma que le indiquemos. Es más sencillo, menos pesado pero más limitado a la hora de ser creativos</p>
 
-            <figure class="examples" >
-                <div>
-                    <img class="cp-circle" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Clip-Path: circle(25% at center)</figcaption>
+            <figure class="samples" >
+                <div class="card-s">
+                    <div class="fd-column">
+                        <img class="cp-circle" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Clip-Path: circle(25% at center)</figcaption>
+                    </div>
                 </div>
-                <div>
-                    <img class="cp-ellipse" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Clip-Path: ellipse(10% 50% at center)</figcaption>
-                </div>               
-                <div>
-                    <img class="cp-polygon" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Clip-Path: custom polygon</figcaption>
+
+                <div class="card-s">
+                    <dic class="fd-column">
+                        <img class="cp-ellipse" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Clip-Path: ellipse(10% 50% at center)</figcaption>
+                    </dic>
+                </div>  
+
+                <div class="card-s">
+                    <div class="fd-column">
+                        <img class="cp-polygon" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Clip-Path: custom polygon</figcaption>
+                    </div>
                 </div>                
             </figure>
         </section>
 
         <section>
-            <h2>Mask Image</h2>
+            <h3>Mask Image</h3>
 
-            <p>Mask Image nos permite colocar una imagen sobre el elemento (los gradientes son considerados imágen por css) y la aplica respetando un sistema de transparencia. No importa el color que tenga la máscara, pero tendrá en cuenta que nivel de transparencia tiene para aplicarlo. La propiedad mask image se puede editar de la misma manera que editamos la propiedad background</p>
+            <p class="paragraph">Mask Image nos permite colocar una imagen sobre el elemento (los gradientes son considerados imágen por css) y la aplica respetando un sistema de transparencia. No importa el color que tenga la máscara, pero tendrá en cuenta que nivel de transparencia tiene para aplicarlo. La propiedad mask image se puede editar de la misma manera que editamos la propiedad background</p>
 
-            <figure class="examples" >
-                <div>
-                    <img class="mi-gradient" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Mask-Image: linear-gradient</figcaption>
+            <figure class="samples" >
+                <div class="card-s">
+                    <div class="fd-column">
+                        <img class="mi-gradient" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Mask-Image: linear-gradient</figcaption>
+                    </div>
                 </div>
-                <div>
-                    <img class="mi-radial-gradient" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Mask-Image: radial-gradient</figcaption>
-                </div>               
-                <div>
-                    <img class="mi-image" src="img/Entrenadores.jpg" alt="Trainers">
-                    <figcaption>Mask-Image: image file</figcaption>
-                    
-                </div>
-                <div>
-                    <img src="img/mask-image.png" alt="Mask Image Reference">
-                    <figcaption>Máscara utilizada</figcaption>
+
+                <div class="card-s">
+                    <div class="portrait fd-column">
+                        <img class="mi-radial-gradient" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Mask-Image: radial-gradient</figcaption>
+                    </div>
+                </div>    
+
+                <div class="card-l">
+                    <div class="fd-column">
+                        <img class="mi-image" src="img/Entrenadores.jpg" alt="Trainers">
+                        <figcaption>Mask-Image: image file</figcaption>
+                    </div>
+                    <div class="fd-column">
+                        <img src="img/mask-image.png" alt="Mask Image Reference">
+                        <figcaption>Máscara utilizada</figcaption>
+                    </div>
                 </div>
         </section>
     </main>
