@@ -180,9 +180,13 @@ text-decoration: none;
         border: 3px solid var(--belloRed);
         background-color: var(--belloCream);
         border-radius: 30px;
-        padding: 5px;
+        padding: 20px;
         height: 50px;
         width: 60%;
+
+        &:focus{
+            outline: 0px solid transparent;
+        }
     }
 }
 
